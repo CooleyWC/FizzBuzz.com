@@ -1,3 +1,7 @@
 export function useFizzBuzz() {
-    return undefined;
+    return {
+
+        input: null
+
+    };
 }

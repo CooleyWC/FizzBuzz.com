@@ -1,5 +1,14 @@
 import {useFizzBuzz} from "./useFizzBuzz.js";
+import { renderHook } from "@testing-library/react";
 
-test('useFizzBuzz.test.js',()=>{
-    expect(useFizzBuzz()).toBeDefined()
+
+describe('the fizzbuzz hook',()=>{
+    it('exists',()=>{
+        expect(useFizzBuzz()).toBeDefined()
+    })
+
+    it('has an input',()=>{
+        const subject = renderHook(useFizzBuzz)
+        expect(subject.result.current.input).toBeDefined()
+    })
 })
