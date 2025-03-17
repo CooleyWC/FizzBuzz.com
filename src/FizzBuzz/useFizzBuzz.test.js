@@ -3,17 +3,18 @@ import { renderHook } from "@testing-library/react";
 
 
 describe('the fizzbuzz hook',()=>{
-    it('exists',()=>{
-        expect(useFizzBuzz()).toBeDefined()
+    let subject;
+    
+    beforeEach(()=>{
+        subject = renderHook(useFizzBuzz)
     })
-
+    
     it('has an input',()=>{
-        const subject = renderHook(useFizzBuzz)
         expect(subject.result.current.input).toBeDefined()
     })
 
     it('has a result',()=>{
-        const subject = renderHook(useFizzBuzz)
         expect(subject.result.current.result).toBeDefined()
     })
 })
+
