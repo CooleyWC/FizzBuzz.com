@@ -26,8 +26,10 @@ describe('the fizzbuzz hook', () => {
         })
 
         it('displays the result', () => {
+            input('3')
+
             play();
-            expect(subject.result.current.result).toEqual('yes')
+            expect(subject.result.current.result).toEqual('fizz')
         })
 
         function play() {

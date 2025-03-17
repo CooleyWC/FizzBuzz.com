@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { fizzBuzz } from './fizzBuzz';
 
 export function useFizzBuzz() {
     
@@ -12,7 +13,7 @@ export function useFizzBuzz() {
         result,
 
         play: ()=>{
-            setResult('yes')
+            setResult(fizzBuzz(input))  
         }
 
     };
