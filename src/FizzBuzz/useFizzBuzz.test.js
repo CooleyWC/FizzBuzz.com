@@ -1,38 +1,46 @@
-import { describe } from "vitest";
+import {describe} from "vitest";
 import {useFizzBuzz} from "./useFizzBuzz.js";
-import { renderHook, act } from "@testing-library/react";
+import {act, renderHook} from "@testing-library/react";
 
 
-describe('the fizzbuzz hook',()=>{
+describe('the fizzbuzz hook', () => {
     let subject;
-    
-    beforeEach(()=>{
+
+    beforeEach(() => {
         subject = renderHook(useFizzBuzz)
     })
-    
-    it('has an input',()=>{
+
+    it('has an input', () => {
         expect(subject.result.current.input).toBeNull()
     })
 
-    it('has a result',()=>{
+    it('has a result', () => {
         expect(subject.result.current.result).toBeNull()
     })
 
-    describe('when playing',()=>{
+    describe('when playing', () => {
 
-        it('updates the input', ()=>{
-            act(()=>{
-                subject.result.current.setInput('4')
-            })
+        it('updates the input', () => {
+            input('4');
             expect(subject.result.current.input).toEqual('4')
         })
 
-        it('displays the result', ()=>{
-            act(()=>{
-                subject.result.current.play()
-            })
+        it('displays the result', () => {
+            play();
             expect(subject.result.current.result).toEqual('yes')
         })
+
+        function play() {
+            act(() => {
+                subject.result.current.play()
+            })
+        }
+
+        function input(input) {
+            act(() => {
+                subject.result.current.setInput(input)
+            })
+        }
     })
 
 })
