@@ -11,4 +11,9 @@ describe('the fizzbuzz hook',()=>{
         const subject = renderHook(useFizzBuzz)
         expect(subject.result.current.input).toBeDefined()
     })
+
+    it('has a result',()=>{
+        const subject = renderHook(useFizzBuzz)
+        expect(subject.result.current.result).toBeDefined()
+    })
 })

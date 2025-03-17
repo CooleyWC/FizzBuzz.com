@@ -1,7 +1,8 @@
 export function useFizzBuzz() {
     return {
 
-        input: null
+        input: null,
+        result: null
 
     };
 }
