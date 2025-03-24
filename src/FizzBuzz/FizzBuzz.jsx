@@ -11,8 +11,8 @@ export function FizzBuzz() {
                 onChange={e => setInput(e.target.value)} 
                 />
             <label className='play-label'>Play</label>
-                <input style={{margin: '0 0.5em'}} type='submit' value='Play'/>
-            <div style={{margin: '2em auto'}}>{result}</div>
+                <input className='submit-button' type='submit' value='Play'/>
+            <div className='result'>{result}</div>
         </form>
     </>
 

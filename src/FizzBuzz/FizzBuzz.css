@@ -1,3 +1,11 @@
 .play-label {
     display: none;
 }
+
+.submit-button {
+    margin: 0 0.5em;
+}
+
+.result {
+    margin: 2em auto;
+}
