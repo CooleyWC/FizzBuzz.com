@@ -1,4 +1,4 @@
-import {useFizzBuzz} from "./useFizzBuzz.js";
+import {useFizzBuzz} from "../useFizzBuzz.js";
 import './FizzBuzz.css';
 
 
