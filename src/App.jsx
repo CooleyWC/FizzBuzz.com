@@ -1,5 +1,5 @@
 import './App.css'
-import {FizzBuzz} from "./FizzBuzz/FizzBuzz/FizzBuzz.jsx";
+import {FizzBuzz} from "./FizzBuzz/component/FizzBuzz.jsx";
 
 function App() {
 

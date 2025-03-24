@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { fizzBuzz } from './fizzBuzz';
+import { fizzBuzz } from '../fizzBuzz.js';
 
 export function useFizzBuzz() {
     
